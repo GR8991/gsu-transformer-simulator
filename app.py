@@ -129,6 +129,22 @@ st.subheader("🌀 Zero-Sequence Circulating Current (Example Frame)")
 zero_frames = zero_sequence_animation(frames=1)
 st.pyplot(zero_frames[0])
 
+
+
+st.subheader("📘 IEC / IEEE Compliance Checks")
+
+colA, colB = st.columns(2)
+
+with colA:
+    st.markdown("### IEC 60076-5 Short-Circuit Withstand Check")
+    compliance = check_short_circuit_withstand(125, ZHL * 100)
+    st.write(compliance)
+
+with colB:
+    st.markdown("### IEC 60076-3 Insulation Level Recommendation")
+    hv_bil = check_insulation_levels(115)
+    st.write(hv_bil)
+
 # -----------------------------------------------------------------------------
 # FOOTER
 # -----------------------------------------------------------------------------
