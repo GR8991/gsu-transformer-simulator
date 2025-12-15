@@ -49,7 +49,18 @@ ZHL = st.sidebar.slider("HV–LV Impedance (pu)", 0.05, 0.30, 0.10)
 ZHT = st.sidebar.slider("HV–Tertiary Impedance (pu)", 0.05, 0.30, 0.12)
 ZLT = st.sidebar.slider("LV–Tertiary Impedance (pu)", 0.05, 0.30, 0.08)
 
+#tfmr = ThreeWindingTransformer(ZHL, ZHT, ZLT)
+# -----------------------------------------------------------------------------
+# INTERACTIVE IMPEDANCE EDITOR  (INSERTED HERE - PART 4)
+# -----------------------------------------------------------------------------
+st.subheader("🧮 Interactive Impedance Editor")
+
+ZHL, ZHT, ZLT, edited_Z = interactive_impedance_editor(ZHL, ZHT, ZLT)
+
 tfmr = ThreeWindingTransformer(ZHL, ZHT, ZLT)
+
+st.success("Impedance matrix updated successfully!")
+
 
 # -----------------------------------------------------------------------------
 # SECTION 1: FAULT CURRENTS
