@@ -13,6 +13,9 @@ from zero_sequence import zero_sequence_animation
 from inrush import inrush_waveform
 from sequence_networks import draw_sequence_network
 from ui_components import etap_card
+from impedance_editor import interactive_impedance_editor
+from iec_ieee_compliance import check_short_circuit_withstand, check_insulation_levels
+
 
 # -----------------------------------------------------------------------------
 # STREAMLIT PAGE SETTINGS
