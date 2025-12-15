@@ -130,5 +130,7 @@ st.pyplot(zero_frames[0])
 # FOOTER
 # -----------------------------------------------------------------------------
 st.markdown("---")
-st.markdown("Built for power system engineers, researchers, and students.  
-**Transformer Analysis Suite – Python + Streamlit**")
+st.markdown("""
+Built for power system engineers, researchers, and students.  
+**Transformer Analysis Suite – Python + Streamlit**
+""")
